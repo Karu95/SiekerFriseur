@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sieker Friseur – Dein Friseursalon in Bielefeld-Sieker. Professionelle Haarschnitte, Styling und Pflege. Jetzt online Termin buchen!">
+  <meta name="theme-color" content="#1B3A5C">
+
+  <!-- TODO: Echte Domain eintragen -->
+  <link rel="canonical" href="https://www.sieker-friseur.de">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:title"       content="Sieker Friseur – Friseursalon in Bielefeld">
+  <meta property="og:description" content="Dein Salon in Bielefeld-Sieker. Professionelle Haarschnitte, Styling und Pflege.">
+  <!-- TODO: Echte Domain + Vorschaubild (1200×630 px) eintragen -->
+  <meta property="og:url"   content="https://www.sieker-friseur.de">
+  <meta property="og:image" content="https://www.sieker-friseur.de/assets/og-image.jpg">
+
+  <title>Sieker Friseur – Friseursalon in Bielefeld</title>
+
+  <!--
+    Google Fonts
+    TODO: Für strikte DSGVO-Konformität Fonts selbst hosten:
+          1. Dateien laden via https://google-webfonts-helper.herokuapp.com
+          2. In /assets/fonts/ ablegen
+          3. @font-face in style.css einbinden und diesen Block entfernen.
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon"       type="image/svg+xml" href="assets/logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================================================================
+     NAVIGATION
+     ================================================================ -->
+<header>
+  <nav id="nav" aria-label="Hauptnavigation">
+    <div class="nav-inner container">
+
+      <a href="#" class="nav-logo" aria-label="Sieker Friseur – zur Startseite">
+        <img src="assets/logo.svg" alt="Sieker Friseur" width="160" height="48">
+      </a>
+
+      <button
+        class="hamburger"
+        aria-label="Menü öffnen"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#team">Team</a></li>
+        <li><a href="#salon">Salon</a></li>
+        <li><a href="#termine">Termine</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ================================================================
+       HERO
+       ================================================================ -->
+  <section id="hero" aria-label="Willkommensbereich">
+    <!--
+      TODO: hero.svg durch ein professionelles Salonfoto ersetzen.
+            Empfohlene Größe: 1440 × 720 px, Dateiformat: .jpg (komprimiert ~150 KB).
+            Dateiname im <img src="..."> entsprechend anpassen.
+    -->
+    <img
+      src="assets/hero.svg"
+      alt=""
+      role="presentation"
+      class="hero-img"
+      loading="eager"
+      fetchpriority="high"
+    >
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="hero-content">
+      <h1>Willkommen bei<br>Sieker Friseur</h1>
+      <p class="hero-sub">Dein Salon in Bielefeld-Sieker</p>
+      <a href="#termine" class="btn btn-primary">Termin buchen</a>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       TEAM
+       ================================================================ -->
+  <section id="team" aria-labelledby="team-heading">
+    <div class="container">
+
+      <h2 id="team-heading">Unser Team</h2>
+      <p class="section-intro">
+        Bei Sieker Friseur verbinden wir Handwerkskunst mit einem Gespür für aktuelle Trends.
+        Lerne die Menschen kennen, die sich um deinen perfekten Look kümmern.
+      </p>
+
+      <div class="team-grid">
+
+        <!-- Karte: Sipan -->
+        <article class="team-card">
+          <div class="team-photo">
+            <!--
+              TODO: team-sipan.svg durch echtes Foto von Sipan ersetzen.
+                    Empfehlung: quadratisches Format, min. 600 × 600 px.
+            -->
+            <img
+              src="assets/team-sipan.svg"
+              alt="Sipan – Inhaber und Friseurmeister bei Sieker Friseur"
+              width="600"
+              height="600"
+              loading="lazy"
+            >
+          </div>
+          <div class="team-info">
+            <h3>Sipan</h3>
+            <p class="team-role">Inhaber &amp; Friseurmeister</p>
+            <p class="team-bio">
+              <!-- TODO: Biografie von Sipan ergänzen -->
+              Mit jahrelanger Erfahrung und einem feinen Gespür für Stil und Trends
+              sorgt Sipan dafür, dass du den Salon immer mit einem Lächeln verlässt.
+              Als ausgebildeter Friseurmeister ist er Experte für präzise Schnitte,
+              moderne Styles und klassische Pflege.
+            </p>
+          </div>
+        </article>
+
+        <!--
+          TODO: Weitere Teammitglieder hier einfügen. Vorlage:
+          <article class="team-card">
+            <div class="team-photo">
+              <img src="assets/team-NAME.jpg" alt="NAME – ROLLE" loading="lazy">
+            </div>
+            <div class="team-info">
+              <h3>NAME</h3>
+              <p class="team-role">ROLLE</p>
+              <p class="team-bio">BIO</p>
+            </div>
+          </article>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       DER SALON
+       ================================================================ -->
+  <section id="salon" class="section-alt" aria-labelledby="salon-heading">
+    <div class="container">
+
+      <h2 id="salon-heading">Der Salon</h2>
+
+      <!-- Bildergalerie -->
+      <div class="gallery-grid" role="list" aria-label="Salon-Galerie">
+        <!--
+          TODO: SVG-Platzhalter durch echte Salonfotos ersetzen (01.jpg – 06.jpg).
+                Empfehlung: querformat, 800 × 600 px, Dateiname in src="..." anpassen.
+        -->
+        <figure class="gallery-item" role="listitem">
+          <img
+            src="assets/gallery/01.svg"
+            alt="Salon-Einblick: Empfangsbereich"
+            loading="lazy"
+            class="gallery-img"
+            data-lightbox="gallery"
+          >
+        </figure>
+        <figure class="gallery-item" role="listitem">
+          <img
+            src="assets/gallery/02.svg"
+            alt="Salon-Einblick: Schneideplätze"
+            loading="lazy"
+            class="gallery-img"
+            data-lightbox="gallery"
+          >
+        </figure>
+        <figure class="gallery-item" role="listitem">
+          <img
+            src="assets/gallery/03.svg"
+            alt="Salon-Einblick: Waschen und Pflege"
+            loading="lazy"
+            class="gallery-img"
+            data-lightbox="gallery"
+          >
+        </figure>
+        <figure class="gallery-item" role="listitem">
+          <img
+            src="assets/gallery/04.svg"
+            alt="Salon-Einblick: Styling-Produkte"
+            loading="lazy"
+            class="gallery-img"
+            data-lightbox="gallery"
+          >
+        </figure>
+        <figure class="gallery-item" role="listitem">
+          <img
+            src="assets/gallery/05.svg"
+            alt="Salon-Einblick: Wartebereich"
+            loading="lazy"
+            class="gallery-img"
+            data-lightbox="gallery"
+          >
+        </figure>
+        <figure class="gallery-item" role="listitem">
+          <img
+            src="assets/gallery/06.svg"
+            alt="Salon-Einblick: Außenansicht"
+            loading="lazy"
+            class="gallery-img"
+            data-lightbox="gallery"
+          >
+        </figure>
+      </div>
+
+      <!-- Lightbox (wird via JS gesteuert) -->
+      <div
+        id="lightbox"
+        class="lightbox"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Vollbild-Bildansicht"
+        hidden
+      >
+        <button class="lightbox-close" aria-label="Bildansicht schließen">&times;</button>
+        <button class="lightbox-prev" aria-label="Vorheriges Bild">&#8249;</button>
+        <img src="" alt="" class="lightbox-img">
+        <button class="lightbox-next" aria-label="Nächstes Bild">&#8250;</button>
+      </div>
+
+      <!-- Öffnungszeiten + Hinweis -->
+      <div class="salon-info-grid">
+
+        <div class="opening-hours">
+          <h3>Öffnungszeiten</h3>
+          <table aria-label="Öffnungszeiten Sieker Friseur">
+            <thead>
+              <tr>
+                <th scope="col">Tag</th>
+                <th scope="col">Uhrzeit</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Montag – Freitag</td>
+                <td>09:00 – 19:00 Uhr</td>
+              </tr>
+              <tr>
+                <td>Samstag</td>
+                <td>09:00 – 18:00 Uhr</td>
+              </tr>
+              <tr class="closed">
+                <td>Sonntag</td>
+                <td>Geschlossen</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <aside class="notice-box" role="note" aria-label="Hinweis zu Terminabsagen">
+          <h3>Wichtiger Hinweis</h3>
+          <p>
+            Bitte sage deinen Termin <strong>mindestens 24 Stunden vorher</strong>
+            über die Buchungs-App ab. Bei Nichterscheinen ohne rechtzeitige Absage
+            wird eine <strong>Ausfallgebühr von 50&nbsp;%</strong> des
+            Leistungspreises berechnet.
+          </p>
+          <p>Vielen Dank für dein Verständnis!</p>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+       TERMINBUCHUNG
+       ================================================================ -->
+  <section id="termine" aria-labelledby="termine-heading">
+    <div class="container">
+
+      <h2 id="termine-heading">Termin buchen</h2>
+      <p class="section-intro">
+        Buche deinen Wunschtermin bequem online – rund um die Uhr,
+        ohne Wartezeit am Telefon.
+      </p>
+
+      <!--
+        Buchungssystem: Simplybook.me
+        Warum Simplybook.me?
+          • Kostenloser Einstiegsplan (bis 50 Buchungen/Monat, 1 Nutzer)
+          • Speziell für Beauty- und Friseursalons konzipiert
+          • Dienstleistungen, Mitarbeiter und Zeiten konfigurierbar
+          • Deutsch verfügbar, EU-Server wählbar (DSGVO-relevant)
+          • Einfache iFrame-Einbettung ohne externe JS-Abhängigkeit
+
+        TODO: IHRE-SUBDOMAIN durch den eigenen Simplybook.me-Accountnamen ersetzen.
+              Anmeldung (kostenlos) unter: https://simplybook.me
+              Nach der Einrichtung (Dienste, Team, Zeiten) die src-URL prüfen.
+      -->
+      <div class="booking-wrapper">
+        <iframe
+          id="booking-iframe"
+          src="https://IHRE-SUBDOMAIN.simplybook.me/v2/"
+          title="Online-Terminbuchung Sieker Friseur"
+          width="100%"
+          height="700"
+          frameborder="0"
+          loading="lazy"
+          allow="payment"
+          aria-label="Buchungsformular"
+        ></iframe>
+
+        <p class="booking-fallback" id="booking-fallback" hidden>
+          Das Buchungssystem ist momentan nicht erreichbar. Bitte ruf uns direkt an:
+          <a href="tel:+4952198838878">0521&nbsp;98838878</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================================================
+       KONTAKT & ANFAHRT
+       ================================================================ -->
+  <section id="kontakt" class="section-alt" aria-labelledby="kontakt-heading">
+    <div class="container">
+
+      <h2 id="kontakt-heading">Kontakt &amp; Anfahrt</h2>
+
+      <div class="kontakt-grid">
+
+        <!-- Kontaktinfos + Social -->
+        <address class="kontakt-info">
+
+          <h3>So findest du uns</h3>
+
+          <div class="kontakt-item">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <div>
+              <strong>Adresse</strong>
+              Detmolder Str. 230<br>33604 Bielefeld
+            </div>
+          </div>
+
+          <div class="kontakt-item">
+            <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24"
+                 fill="none" stroke="currentColor" stroke-width="2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.89a16 16 0 0 0 6 6l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <div>
+              <strong>Telefon</strong>
+              <a href="tel:+4952198838878">0521 98838878</a>
+            </div>
+          </div>
+
+          <!-- Social Media -->
+          <div class="social-links">
+            <h3>Folge uns</h3>
+            <div class="social-icons">
+
+              <!-- TODO: Echte Facebook-URL eintragen -->
+              <a
+                href="https://www.facebook.com/TODO-SIEKER-FRISEUR"
+                aria-label="Sieker Friseur auf Facebook"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social-icon"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24"
+                     fill="currentColor" aria-hidden="true">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                </svg>
+                Facebook
+              </a>
+
+              <!-- TODO: Echte Instagram-URL eintragen -->
+              <a
+                href="https://www.instagram.com/TODO-SIEKER-FRISEUR"
+                aria-label="Sieker Friseur auf Instagram"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social-icon"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24"
+                     fill="none" stroke="currentColor" stroke-width="2"
+                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                </svg>
+                Instagram
+              </a>
+
+              <!-- TODO: Echte TikTok-URL eintragen -->
+              <a
+                href="https://www.tiktok.com/@TODO-SIEKER-FRISEUR"
+                aria-label="Sieker Friseur auf TikTok"
+                rel="noopener noreferrer"
+                target="_blank"
+                class="social-icon"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24"
+                     fill="currentColor" aria-hidden="true">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.83a8.16 8.16 0 0 0 4.77 1.52V6.9a4.85 4.85 0 0 1-1-.21z"/>
+                </svg>
+                TikTok
+              </a>
+
+            </div>
+          </div>
+
+        </address>
+
+        <!-- Google Maps -->
+        <div class="map-container" aria-label="Kartenansicht des Salons">
+
+          <!--
+            Google Maps: erst nach Cookie-Zustimmung via cookie-consent.js geladen.
+            TODO: Den Embed-Link ggf. mit dem korrekten Platz-ID aktualisieren.
+                  Gehe auf maps.google.de → Salon suchen → Teilen → Karte einbetten → Link kopieren.
+          -->
+          <div class="map-placeholder" id="map-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24"
+                 fill="none" stroke="#1B3A5C" stroke-width="1.5"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+            <p>Die Karte wird angezeigt, sobald du Cookies akzeptierst.</p>
+            <button class="btn btn-secondary btn-sm" onclick="CookieConsent.show()">
+              Cookie-Einstellungen öffnen
+            </button>
+          </div>
+
+          <iframe
+            id="google-maps-iframe"
+            src="about:blank"
+            data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2449.9!2d8.574!3d51.985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zRGV0bW9sZGVyIFN0ci4gMjMwLCAzMzYwNCBCaWVsZWZlbGQ!5e0!3m2!1sde!2sde!4v1234567890"
+            title="Karte: Sieker Friseur, Detmolder Str. 230, 33604 Bielefeld"
+            width="100%"
+            height="450"
+            style="border:0; display:none; border-radius:16px;"
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            aria-label="Google Maps Wegbeschreibung zum Salon"
+          ></iframe>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================================================================
+     FOOTER
+     ================================================================ -->
+<footer>
+  <div class="container">
+
+    <div class="footer-inner">
+
+      <div class="footer-brand">
+        <img src="assets/logo.svg" alt="Sieker Friseur" width="150" height="46" loading="lazy">
+        <address class="footer-address">
+          Detmolder Str. 230<br>
+          33604 Bielefeld<br>
+          <a href="tel:+4952198838878">0521 98838878</a>
+        </address>
+      </div>
+
+      <nav class="footer-nav" aria-label="Rechtliche Links">
+        <!-- TODO: impressum.html und datenschutz.html erstellen -->
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+        <button class="footer-cookie-btn" onclick="CookieConsent.show()">
+          Cookie-Einstellungen
+        </button>
+      </nav>
+
+    </div>
+
+    <p class="footer-copy">
+      &copy; <span id="footer-year"></span> Sieker Friseur &ndash; Alle Rechte vorbehalten
+    </p>
+
+  </div>
+</footer>
+
+<!-- Cookie Consent (Banner wird dynamisch eingefügt) -->
+<script src="cookie-consent.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>

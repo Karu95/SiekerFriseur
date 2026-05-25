@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" role="img" aria-label="Foto-Platzhalter für Sipan">
+  <title>TODO: Durch echtes Foto von Sipan ersetzen</title>
+  <rect width="300" height="300" fill="#E8EEF4"/>
+  <!-- Silhouette -->
+  <circle cx="150" cy="110" r="52" fill="#B8C8D8"/>
+  <path d="M 48 300 Q 48 210 150 210 Q 252 210 252 300 Z" fill="#B8C8D8"/>
+  <!-- Orange accent bar -->
+  <rect y="285" width="300" height="15" fill="#F47F47"/>
+</svg>

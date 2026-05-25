@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 720" role="img" aria-label="Platzhalter Herobild">
+  <title>TODO: Dieses Bild durch ein echtes Salonfoto ersetzen (hero.jpg)</title>
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#1B3A5C"/>
+      <stop offset="100%" stop-color="#2a5a8f"/>
+    </linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1440" height="720" fill="url(#heroGrad)"/>
+  <rect width="1440" height="720" fill="url(#grid)"/>
+  <!-- Decorative scissors -->
+  <g transform="translate(620, 260)" fill="none" stroke="rgba(244,127,71,0.4)" stroke-width="6" stroke-linecap="round">
+    <circle cx="20"  cy="20"  r="18"/>
+    <circle cx="20"  cy="160" r="18"/>
+    <line x1="34"  y1="32"  x2="166" y2="148"/>
+    <line x1="34"  y1="148" x2="166" y2="32"/>
+  </g>
+  <!-- Placeholder text -->
+  <text x="720" y="330" text-anchor="middle" font-family="Montserrat, sans-serif" font-size="18" fill="rgba(255,255,255,0.3)" font-weight="600">FOTO PLATZHALTER</text>
+  <text x="720" y="358" text-anchor="middle" font-family="sans-serif" font-size="13" fill="rgba(255,255,255,0.2)">TODO: Durch echtes Salonbild (1440 × 720 px) ersetzen</text>
+</svg>
