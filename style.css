@@ -667,6 +667,18 @@ section {
 .notice-box p + p { margin-top: var(--space-xs); }
 
 /* ============================================================
+   SIMPLYBOOK REVIEWS WIDGET
+   ============================================================ */
+.reviews-widget-wrap {
+  margin-bottom: var(--space-md);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--border);
+  min-height: 60px; /* collapses cleanly if widget returns no content */
+}
+
+/* ============================================================
    BOOKING
    ============================================================ */
 .booking-wrapper {

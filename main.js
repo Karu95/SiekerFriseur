@@ -116,7 +116,7 @@
   var bookingFallback = document.getElementById('booking-fallback');
 
   if (bookingIframe && bookingFallback) {
-    if (bookingIframe.src.includes('IHRE-SUBDOMAIN')) {
+    if (bookingIframe.src.includes('IHRE-SUBDOMAIN') || bookingIframe.src === 'about:blank') {
       bookingIframe.style.display = 'none';
       bookingFallback.hidden      = false;
     }
