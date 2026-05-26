@@ -1,6 +1,6 @@
 /**
  * main.js
- * Navigation, gallery lightbox, and minor UI helpers for Sieker Friseur.
+ * Navigation, gallery lightbox, scroll reveal, and minor UI helpers.
  * No external dependencies.
  */
 
@@ -59,8 +59,8 @@
   function openLightbox(index) {
     if (!lightbox) return;
     currentIndex = index;
-    lbImg.src    = galleryImgs[currentIndex].src;
-    lbImg.alt    = galleryImgs[currentIndex].alt;
+    lbImg.src       = galleryImgs[currentIndex].src;
+    lbImg.alt       = galleryImgs[currentIndex].alt;
     lightbox.hidden = false;
     document.body.classList.add('lightbox-open');
     lbClose.focus();
@@ -75,14 +75,14 @@
 
   function showPrev() {
     currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
-    lbImg.src    = galleryImgs[currentIndex].src;
-    lbImg.alt    = galleryImgs[currentIndex].alt;
+    lbImg.src = galleryImgs[currentIndex].src;
+    lbImg.alt = galleryImgs[currentIndex].alt;
   }
 
   function showNext() {
     currentIndex = (currentIndex + 1) % galleryImgs.length;
-    lbImg.src    = galleryImgs[currentIndex].src;
-    lbImg.alt    = galleryImgs[currentIndex].alt;
+    lbImg.src = galleryImgs[currentIndex].src;
+    lbImg.alt = galleryImgs[currentIndex].alt;
   }
 
   galleryImgs.forEach(function (img, i) {
@@ -125,5 +125,49 @@
       bookingFallback.hidden      = false;
     });
   }
+
+  // ── Scroll reveal (IntersectionObserver) ─────────────────────────
+
+  if (!('IntersectionObserver' in window)) return;
+
+  var observer = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  // Elements that reveal individually
+  var singleRevealSelectors = [
+    'section h2',
+    '.section-intro',
+    '.opening-hours',
+    '.notice-box',
+    '.booking-wrapper',
+    '.kontakt-item',
+    '.social-links',
+    '.map-container',
+  ];
+
+  document.querySelectorAll(singleRevealSelectors.join(', ')).forEach(function (el) {
+    el.classList.add('reveal');
+    observer.observe(el);
+  });
+
+  // Team cards: staggered
+  document.querySelectorAll('.team-card').forEach(function (card, i) {
+    card.classList.add('reveal');
+    card.style.transitionDelay = (i * 0.13) + 's';
+    observer.observe(card);
+  });
+
+  // Gallery items: staggered scale-in
+  document.querySelectorAll('.gallery-item').forEach(function (item, i) {
+    item.classList.add('reveal');
+    item.style.transitionDelay = (i * 0.08) + 's';
+    observer.observe(item);
+  });
 
 })();

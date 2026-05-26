@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 56" role="img" aria-label="Sieker Friseur Logo">
   <title>Sieker Friseur</title>
   <!-- Scissors icon -->
-  <g transform="translate(4, 8)" fill="none" stroke="#F47F47" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(4, 8)" fill="none" stroke="#2B2B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="6"  cy="6"  r="3"/>
     <circle cx="6"  cy="30" r="3"/>
     <line x1="8.8"  y1="8.2"  x2="30" y2="26"/>
@@ -10,6 +10,6 @@
     <line x1="30"   y1="26"   x2="36" y2="26"/>
   </g>
   <!-- Wordmark -->
-  <text x="48" y="22" font-family="Montserrat, sans-serif" font-size="14" font-weight="700" fill="#1B3A5C" letter-spacing="1">SIEKER</text>
-  <text x="48" y="38" font-family="Montserrat, sans-serif" font-size="14" font-weight="600" fill="#F47F47" letter-spacing="1">FRISEUR</text>
+  <text x="48" y="22" font-family="Montserrat, sans-serif" font-size="14" font-weight="700" fill="#2B2B2B" letter-spacing="1">SIEKER</text>
+  <text x="48" y="38" font-family="Montserrat, sans-serif" font-size="14" font-weight="600" fill="#B3B3B3" letter-spacing="1">FRISEUR</text>
 </svg>
